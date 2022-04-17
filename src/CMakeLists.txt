@@ -429,6 +429,7 @@ list(APPEND SOURCE_FILES
         displayapp/screens/Motion.cpp
         displayapp/screens/FlashLight.cpp
         displayapp/screens/List.cpp
+        displayapp/screens/CheckboxList.cpp
         displayapp/screens/BatteryInfo.cpp
         displayapp/screens/Steps.cpp
         displayapp/screens/Timer.cpp
@@ -458,6 +459,7 @@ list(APPEND SOURCE_FILES
         displayapp/screens/WatchFaceDigital.cpp
         displayapp/screens/WatchFaceTerminal.cpp
         displayapp/screens/PineTimeStyle.cpp
+        displayapp/screens/WatchFaceMin.cpp
 
         ##
 
@@ -514,6 +516,7 @@ list(APPEND SOURCE_FILES
         displayapp/fonts/jetbrains_mono_42.c
         displayapp/fonts/lv_font_sys_48.c
         displayapp/fonts/open_sans_light.c
+        displayapp/fonts/stm_80.c
         displayapp/lv_pinetime_theme.c
 
         systemtask/SystemTask.cpp
@@ -641,6 +644,7 @@ set(INCLUDE_FILES
         displayapp/screens/FirmwareUpdate.h
         displayapp/screens/FirmwareValidation.h
         displayapp/screens/ApplicationList.h
+        displayapp/screens/CheckboxList.h
         displayapp/Apps.h
         displayapp/screens/Notifications.h
         displayapp/screens/HeartRate.h

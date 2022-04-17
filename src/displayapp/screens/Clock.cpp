@@ -12,6 +12,7 @@
 #include "displayapp/screens/WatchFaceTerminal.h"
 #include "displayapp/screens/WatchFaceAnalog.h"
 #include "displayapp/screens/PineTimeStyle.h"
+#include "displayapp/screens/WatchFaceMin.h"
 
 using namespace Pinetime::Applications::Screens;
 
@@ -44,6 +45,9 @@ Clock::Clock(DisplayApp* app,
           break;
         case 3:
           return WatchFaceTerminalScreen();
+          break;
+        case 4:
+          return WatchFaceMinScreen();
           break;
       }
       return WatchFaceDigitalScreen();
@@ -92,5 +96,15 @@ std::unique_ptr<Screen> Clock::WatchFaceTerminalScreen() {
                                                       notificatioManager,
                                                       settingsController,
                                                       heartRateController,
+                                                      motionController);
+}
+
+std::unique_ptr<Screen> Clock::WatchFaceMinScreen() {
+  return std::make_unique<Screens::WatchFaceMin>(app,
+                                                      dateTimeController,
+                                                      batteryController,
+                                                      bleController,
+                                                      notificatioManager,
+                                                      settingsController,
                                                       motionController);
 }
